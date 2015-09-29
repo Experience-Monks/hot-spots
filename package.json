@@ -1,0 +1,31 @@
+{
+  "name": "hot-spots",
+  "version": "1.0.0",
+  "description": "A high level module to add and remove hot spots to tracked video",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Mikko Haapoja",
+    "email": "me@mikkoh.com",
+    "url": "https://github.com/mikkoh"
+  },
+  "dependencies": {
+    "raf-loop": "^1.1.3",
+    "tween-function": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "hotspot,hot,spot,video,tracking,position,time,animate"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikkoh/hot-spots.git"
+  },
+  "homepage": "https://github.com/mikkoh/hot-spots",
+  "bugs": {
+    "url": "https://github.com/mikkoh/hot-spots/issues"
+  }
+}

@@ -26,6 +26,23 @@ hotspots.on('add', function(spots) {
         document.body.appendChild(els[ name ]);
       }
     });
+
+    document.addEventListener('mousedown', function() {
+
+      document.addEventListener('mousemove', onMouseMove);
+      document.addEventListener('mouseup', onMouseUp);
+
+      function onMouseMove(ev) {
+        hotspots.stop();
+        hotspots.seek(ev.clientX / window.innerWidth * hotspots.duration);
+      }
+
+      function onMouseUp() {
+        hotspots.start();
+        document.removeEventListener('mousemove', onMouseMove);
+        document.removeEventListener('mouseup', onMouseUp);
+      }
+    });
   } else {
     console.log('add', spots);
   }

@@ -9,7 +9,20 @@ module.exports = function(hotspots) {
   var ticker = getTicker();
   var hotSpotsOnScreen = [];
 
-  ticker.on('time', function(time) {
+  ticker.on('time', update);
+
+  emitter.time = 0;
+  emitter.duration = tweenFunctions.$duration;
+  emitter.start = ticker.start.bind(ticker);
+  emitter.stop = ticker.stop.bind(ticker);
+  emitter.seek = ticker.seek.bind(ticker);
+
+  // we won't need the duration anymore so we'll remove
+  delete tweenFunctions.$duration;
+
+  return emitter;
+
+  function update(time) {
 
     var update = {};
     var updateKeys;
@@ -89,18 +102,7 @@ module.exports = function(hotspots) {
       emitter.emit('remove', hotSpotsOnScreen);
       hotSpotsOnScreen = [];
     }
-  });
-
-  emitter.time = 0;
-  emitter.duration = tweenFunctions.$duration;
-  emitter.start = ticker.start.bind(ticker);
-  emitter.stop = ticker.stop.bind(ticker);
-  emitter.seek = ticker.seek.bind(ticker);
-
-  // we won't need the duration anymore so we'll remove
-  delete tweenFunctions.$duration;
-
-  return emitter;
+  }
 };
 
 

@@ -1,7 +1,7 @@
 {
   "name": "hot-spots",
   "version": "1.0.0",
-  "description": "A high level module to add and remove hot spots to tracked video",
+  "description": "Create add, remove, and position animated hotspots",
   "main": "index.js",
   "license": "MIT",
   "author": {
@@ -22,10 +22,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/mikkoh/hot-spots.git"
+    "url": "git://github.com/jam3/hot-spots.git"
   },
-  "homepage": "https://github.com/mikkoh/hot-spots",
+  "homepage": "https://github.com/jam3/hot-spots",
   "bugs": {
-    "url": "https://github.com/mikkoh/hot-spots/issues"
+    "url": "https://github.com/jam3/hot-spots/issues"
   }
 }

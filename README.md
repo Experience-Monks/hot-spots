@@ -2,7 +2,7 @@
 
 [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
 
-A high level module to add and remove hot spots to tracked video
+Create add, remove, and position animated hotspots.
 
 ## Usage
 
